@@ -1,0 +1,56 @@
+{# templates/_contact_fields_only.html #}
+
+<div class="mb-3">
+  <input type="text" class="form-control py-3 px-4" name="name" placeholder="Name" required>
+  <div class="invalid-feedback">The field is required.</div>
+</div>
+
+<div class="row-inline mb-3">
+  <div class="col">
+    <input type="email" class="form-control py-3 px-4" name="email" placeholder="Email" required>
+    <div class="invalid-feedback">The field is required.</div>
+  </div>
+  <div class="col">
+    <input type="tel" class="form-control py-3 px-4" name="phone" placeholder="Phone" required>
+    <div class="invalid-feedback">The field is required.</div>
+  </div>
+</div>
+
+<!-- REMOVED SUBJECT FIELD -->
+
+<div class="mb-3">
+  <textarea class="form-control py-3 px-4" name="message" rows="4" placeholder="Message" required></textarea>
+  <div class="invalid-feedback">The field is required.</div>
+</div>
+
+<!-- Success Toast -->
+<div class="success_msg toast align-items-center shadow-none mb-3 border border-success rounded-pill my-2"
+     role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+  <div class="d-flex p-2">
+    <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
+      <i class="fa-solid fa-check f-24 text-success"></i>
+      <span class="toast-text">Your message was sent.</span>
+    </div>
+    <button type="button"
+            class="me-2 m-auto bg-transparent border-0 ps-1 pe-0 text-success toast-close-btn"
+            aria-label="Close">✕</button>
+  </div>
+</div>
+
+<!-- Error Toast -->
+<div class="error_msg toast align-items-center shadow-none border-danger mb-3 my-2 border rounded-pill"
+     role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+  <div class="d-flex p-2">
+    <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
+      <i class="fa-solid fa-triangle-exclamation f-24 text-danger"></i>
+      <span class="toast-text">Something went wrong. Please try again.</span>
+    </div>
+    <button type="button"
+            class="me-2 m-auto bg-transparent border-0 ps-1 pe-0 text-danger toast-close-btn"
+            aria-label="Close">✕</button>
+  </div>
+</div>
+
+<button type="submit"
+        class="btn btn-accent submit_form py-3 gap-2 justify-content-center"
+        style="width:100%;">Submit</button>

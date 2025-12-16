@@ -1,0 +1,109 @@
+ {% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.2/animation_utility.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="{% static 'image/logo.png' %}" />
+
+    {% block title %}Peppe Planet - Homepage{% endblock %}
+
+
+  </head>
+
+ <!-- Header -->
+    <div id="header" class="fixed-top bg-accent-transparent">
+      <div class="r-container">
+        <nav class="navbar navbar-expand-xl">
+          <div class="container-fluid ps-3">
+            <div class="logo-container">
+              <a class="navbar-brand" href="#"
+                ><img src="{% static 'image/logo.png' %}" alt="" class="img-fluid"></a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars-staggered accent-color-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-xl-0 gap-xl-4 gap-1">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'index' %}"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#"> About Us</a>
+              </li>
+
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#"> Activities </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Offers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Packages</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Franchisee</a>
+              </li>
+             
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href=""
+                  role="button"
+                  aria-expanded="false"
+                  >Locate Us
+                </a>
+              </li>
+                  </ul>
+                </li>
+              </ul>
+              <div
+                class="mb-xl-0 mb-3 w-max-content ps-xl-3"
+                style="justify-self: center"
+              >
+                <a
+                  href="contact.html"
+                  class="btn btn-accent-outline d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-1 justify-content-between"
+                >
+                  <span>Get in Touch</span>
+                  <div class="icon-box-2" style="transform: rotate(0deg)">
+                    <i class="rtmicon rtmicon-classic-phone"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- End Header -->
+     {% block content %}
+     {% endblock %}
+

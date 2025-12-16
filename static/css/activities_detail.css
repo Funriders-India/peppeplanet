@@ -1,0 +1,167 @@
+/* activities_detail.css */
+
+.activity-detail-wrapper {
+  min-height: 80vh;
+  padding: 40px 20px;
+}
+
+.square-box {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-section {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-arrow {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #5a0a78;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(90, 10, 120, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.85);
+}
+
+.card-arrow:hover {
+  background: #7a1fa2;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(90, 10, 120, 0.3);
+}
+
+.card-arrow:active {
+  transform: scale(0.95);
+}
+
+.card-arrow svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.cards-viewport {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* REMOVE ALL ANIMATIONS from .left-cards */
+.left-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* NO animation property here */
+  transition: transform 0.05s linear; /* Very fast transition for smooth movement */
+  will-change: transform; /* Optimize for transforms */
+}
+
+.mini-card {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.mini-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mini-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.mini-card:hover img {
+  transform: scale(1.05);
+}
+
+.right-text {
+  flex: 1;
+  padding: 50px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.right-text h2 {
+  color: #5a0a78;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.right-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #5a0a78;
+  border-radius: 2px;
+}
+
+.right-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .square-box {
+    flex-direction: column;
+  }
+  
+  .left-section {
+    padding: 20px;
+  }
+  
+  .cards-viewport {
+    height: 350px;
+  }
+  
+  .right-text {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-viewport {
+    height: 300px;
+  }
+  
+  .mini-card {
+    height: 150px;
+  }
+  
+  .right-text h2 {
+    font-size: 2rem;
+  }
+} 

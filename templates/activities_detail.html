@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Peppe Planet - Activities Detail{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/activities_detail.css' %}">
+
+<div class="r-container activity-detail-wrapper">
+  <div class="square-box">
+
+    <!-- LEFT SECTION (Images) -->
+    <div class="left-section">
+      <!-- VIEWPORT for images -->
+      <div class="cards-viewport" id="cardsViewport">
+        <!-- TRACK where images will be placed -->
+        <div id="cards-track" class="cards-track">
+          <!-- Fallback images -->
+          <div class="mini-card"><img src="{% static 'image/softplay.jpg' %}" alt="Soft Play"></div>
+          <div class="mini-card"><img src="{% static 'image/toddlers.jpeg' %}" alt="Toddlers"></div>
+          <div class="mini-card"><img src="{% static 'image/softplay.jpg' %}" alt="Soft Play 2"></div>
+          <div class="mini-card"><img src="{% static 'image/softplay.jpg' %}" alt="Soft Play 3"></div>
+        </div>
+        
+        <!-- Touch indicator for mobile -->
+        <div class="touch-indicator">
+          <span>Touch to pause</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION TEXT -->
+    <div class="right-section">
+      <div class="right-text">
+        <h1 class="activity-title">Soft Play</h1>
+        <div class="activity-description">
+          <p>
+            Soft play is a specially designed indoor play area created with padded floors,
+            soft structures, slides, ball pits, and climbing frames. Perfect for children
+            aged 1-5 years to explore safely.
+          </p>
+          {% comment %} <div class="mobile-instructions d-lg-none">
+            <div class="instruction-item">
+              <i class="fas fa-hand-point-up"></i>
+              <span>Touch images to pause scrolling</span>
+            </div>
+            <div class="instruction-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Swipe to view more images</span>
+            </div>
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Font Awesome for icons (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Load JavaScript -->
+<script src="{% static 'js/activities_detail.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Peppe Planet - Offers{% endblock %}
+
+{% block content %}
+<!-- Main -->
+    <main>
+  <!-- Banner -->
+       <div class="section position-relative bg-attach-cover"
+     style="background-image: url('{% static "image/BG10.png" %}'); padding-bottom: 25rem; padding-top: 5rem;">
+
+            <div class="r-container">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col mb-3 scrollanimation animated zoomIn">
+                        <div class="d-flex flex-column gap-3 justify-content-center h-100">
+                            <h6 class="brush1 accent-color-2 w-max-content">Offers & Packages</h6>
+                            <h1>Explore Peppe Play — Packages That Put Fun First <span class="accent-color fw-bold"></span></h1>
+                            <p style="max-width: 600px;">
+                                 Flexible visit passes, family packs, birthday packages and annual memberships — all designed
+              for gadget-free, supervised fun. Book online or contact us for custom corporate & school quotes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col mb-3 scrollanimation animated pulse">
+                       <img src="{% static 'image/dummy-img-600x600.jpg' %}" class="img-fluid" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Pricing Plan -->
+        <div class="section"
+         style="background-image: url('{% static "image/BG4.png" %}'); background-position: center; background-size: cover;">
+
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-5 justify-content-center">
+                    <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                        style="max-width: 700px;">
+                        <h6 class="brush1 accent-color-2" style="width: max-content;">Pricing Plan</h6>
+                        <h3>Find the <span class="accent-color fw-bold">Perfect Plan</span> for Your Child’s Future</h3>
+                        <p style="max-width: 600px;">
+                            We bring learning to life with engaging activities, real-world connections, and a focus on
+                            making every moment exciting.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div id="tab-duration" class="tab-container pricing scrollanimation animated fadeInDown">
+                    <div class="tab active" id="tab-yearly" data-duration="monthly">Monthly</div>
+                    <div class="tab" id="tab-monthly" data-duration="yearly">Yearly</div>
+                </div>
+
+                <!-- Card Container -->
+                <div class="class-container">
+                    <div class="class-duration overflow-visible" data-duration="monthly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Basic Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$15.99</h2>
+                                            <span>/Monthly</span>
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'image/asset10.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Introduce kids to educational content with minimal commitment.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to 30+ introductory lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Weekly quizzes to track progress.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Email support.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Limited access to educational games.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Progress reports once a month
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-duration overflow-visible" data-duration="monthly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Explorer Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$29.99</h2>
+                                            <span>/Monthly</span>
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Build a well-rounded foundation in a variety of subjects.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to 100+ lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Monthly live group sessions (1 hour)
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Personalized progress tracking.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Limited access to educational games.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to a library of educational videos.
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-duration overflow-visible" data-duration="monthly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Achiever Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$49.99</h2>
+                                            <span>/Monthly</span>
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Introduce kids to educational content with minimal commitment.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Unlimited access to 500+ lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Weekly 1-on-1 tutoring sessions.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to interactive challenges.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Monthly parent-teacher check-ins.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Priority email and phone support.
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-duration overflow-visible" data-duration="yearly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Basic Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$115.99</h2>
+                                            <span>/Yearly</span>
+                                        </div>
+                                    </div>
+                                    <img src="{% static 'image/asset10.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Introduce kids to educational content with minimal commitment.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to 30+ introductory lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Weekly quizzes to track progress.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Email support.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Limited access to educational games.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Progress reports once a month
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-duration overflow-visible" data-duration="yearly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Explorer Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$229.99</h2>
+                                            <span>/Yearly</span>
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Build a well-rounded foundation in a variety of subjects.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to 100+ lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Monthly live group sessions (1 hour)
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Personalized progress tracking.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Limited access to educational games.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to a library of educational videos.
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-duration overflow-visible" data-duration="yearly">
+                        <div class="card card-pricing-hover p-5">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex flex-xl-row flex-column justify-content-between gap-3 align-items-center">
+                                    <div class="d-flex flex-column gap-3">
+                                        <h4>Achiever Plan</h4>
+                                        <div class="d-flex flex-row heading mb-3 align-items-end">
+                                            <h2 class="m-0 fw-semibold">$449.99</h2>
+                                            <span>/Yearly</span>
+                                        </div>
+                                    </div>
+                                   <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
+
+                                </div>
+                                <p>Introduce kids to educational content with minimal commitment.</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Unlimited access to 500+ lessons.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Weekly 1-on-1 tutoring sessions.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Access to interactive challenges.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Monthly parent-teacher check-ins.
+                                    </div>
+                                    <hr class="accent-color m-0">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-3"></i>
+                                        Priority email and phone support.
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a href="" class="btn btn-accent-outline-white px-5 py-3 rounded-pill w-100">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+  
+{% endblock %} 
+
+   
+

@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Peppe Planet - Franchise{% endblock %}
+
+{% block content %}
+
+
+
+{% comment %} <div class="franchise-wrapper">
+    <div class="franchise-grid">
+<div class="franchise-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="{% static 'image/Logo-2.png' %}" class="card-image" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="card-back">
+            <h3>Little Peppe</h3>
+            <p>
+                Little Peppe offers a safe, colorful play space for toddlers to jump, crawl, and explore. With mini slides, soft zones, and playful surprises, every visit becomes a big adventure.
+            </p>
+
+              <a href="{% url 'little_peppe' %}"
+   class="btn btn-accent-outline-white d-flex flex-row rounded-pill gap-2 ps-4 pe-4 py-2 justify-content-center franchise-btn-link">
+    <span>Learn More</span>
+</a>
+
+        </div>
+    </div>
+</div>
+
+
+       <div class="franchise-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="{% static 'image/Logo-3.png' %}" class="card-image" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="card-back">
+            <h3>Peppe Toys</h3>
+            <p>
+                Peppe Toys brings playful joy and creativity to life with colorful characters and interactive playsets. Whether it's pretend play, puzzles, or cuddly companions, each toy is crafted to educate, entertain, and inspire.
+            </p>
+
+              <a href="{% url 'little_peppe' %}"
+   class="btn btn-accent-outline-white d-flex flex-row rounded-pill gap-2 ps-4 pe-4 py-2 justify-content-center franchise-btn-link">
+    <span>Learn More</span>
+</a>
+
+        </div>
+    </div>
+</div>
+
+ <div class="franchise-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <img src="{% static 'image/Logo-3.png' %}" class="card-image" alt="">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="card-back">
+            <h3>Peppe Party</h3>
+            <p>
+                Peppe Party brings unforgettable celebrations to life with vibrant themes, fun activities, and endless excitement. Every moment is crafted to make your child’s special day joyful, memorable, and full of smiles.
+            </p>
+
+              <a href="{% url 'little_peppe' %}"
+   class="btn btn-accent-outline-white d-flex flex-row rounded-pill gap-2 ps-4 pe-4 py-2 justify-content-center franchise-btn-link">
+    <span>Learn More</span>
+</a>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+</div> {% endcomment %}
+
+    <!-- Banner -->
+    <div class="section pb-0">
+        <div class="r-container">
+            <div class="row row-cols-xl-2 row-cols-1 align-items-center">
+                <div class="col mb-3">
+                    <div class="position-relative mt-xl-5">
+                        <img src="{% static 'image/franchiseimg.png' %}" class="img-fluid h-100 mt-xl-5" alt=""
+                            style="height: 700px width:600px">
+
+                    </div>
+                </div>
+                <div class="col mb-3 scrollanimation animated fadeInRight overflow-visible position-relative"
+                    style="z-index: 2;">
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex flex-column gap-3" style="max-width: 700px;">
+                            <h6 class="brush1 accent-color-2" style="width: max-content;">Contact Now</h6>
+                            <h3>Looking for an Easy to Run Business<br> <span class="accent-color fw-bold">Start Your Own Play & Party Area</span></h3>
+                            <p style="max-width: 600px;">
+                                Become a Franchise Partner of India’s Fast-Growing Entertainment & Party Brand
+                            </p>
+                        </div>
+                        <div class="d-flex flex-column gap-3 justify-content-center w-100">
+                            <div class="position-relative w-100">
+                                <div class="success_msg toast align-items-center w-100 shadow-none mb-3 border border-success rounded-pill my-4"
+                                    role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="d-flex p-2">
+                                        <div
+                                            class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
+                                            <i class="fa-solid fa-check f-36 text-success"></i>
+                                            Your Message Successfully Send.
+                                        </div>
+                                        <button type="button"
+                                            class="me-2 m-auto bg-transparent border-0 ps-1 pe-0 text-success"
+                                            data-bs-dismiss="toast" aria-label="Close"><i
+                                                class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                </div>
+                                <div class="error_msg toast align-items-center w-100 shadow-none border-danger mb-3 my-4 border rounded-pill"
+                                    role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="d-flex p-2">
+                                        <div
+                                            class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
+                                            <i class="fa-solid fa-triangle-exclamation f-36 text-danger"></i>
+                                            Something Wrong ! Send Form Failed.
+                                        </div>
+                                        <button type="button"
+                                            class="me-2 m-auto bg-transparent border-0 ps-1 pe-0 text-danger"
+                                            data-bs-dismiss="toast" aria-label="Close"><i
+                                                class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <div class="d-flex flex-column gap-3 p-lg-4">
+                                        <div>
+                                            {% if messages %}
+                                            {% for message in messages %}
+                                            <div class="alert 
+                                                    {% if message.tags == 'success' %}alert-success
+                                                    {% elif message.tags == 'error' %}alert-danger
+                                                    {% else %}alert-info{% endif %}
+                                                    alert-dismissible fade show" role="alert">
+
+                                                {{ message }}
+                                                <button type="button" class="btn-close"
+                                                    data-bs-dismiss="alert"></button>
+                                            </div>
+                                            {% endfor %}
+                                            {% endif %}
+
+                                            <form method="post" action="{% url 'franchise' %}"
+                                                class="d-flex flex-column contact h-100 justify-content-center w-100 form">
+
+                                                {% csrf_token %}
+
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control py-3 px-4" name="name"
+                                                        id="name" placeholder="Name" required>
+                                                    <div class="invalid-feedback">
+                                                        The field is required.
+                                                    </div>
+                                                </div>
+                                                <div class="row row-cols-xl-2 row-cols-1">
+                                                    <div class="col mb-3">
+                                                        <input type="email" class="form-control py-3 px-4" name="email"
+                                                            id="email" placeholder="Email" required>
+                                                        <div class="invalid-feedback">
+                                                            The field is required.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col mb-3">
+                                                        <input type="tel" class="form-control py-3 px-4" name="phone"
+                                                            id="phone" placeholder="Phone" required>
+                                                        <div class="invalid-feedback">
+                                                            The field is required.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control py-3 px-4" name="subject"
+                                                        id="subject" placeholder="Subject" required>
+                                                    <div class="invalid-feedback">
+                                                        The field is required.
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea class="form-control py-3 px-4" name="message" rows="4"
+                                                        id="message" placeholder="Message" required></textarea>
+                                                    <div class="invalid-feedback">
+                                                        The field is required.
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit"
+                                                    class="btn btn-accent submit_form py-3 gap-2 justify-content-center">
+                                                    Submit
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    // Auto-hide Django messages after 5 seconds
+    setTimeout(function () {
+        let messages = document.querySelectorAll('.alert');
+        messages.forEach(function(msg) {
+            msg.style.transition = "opacity 0.5s ease";
+            msg.style.opacity = "0";
+            setTimeout(() => msg.remove(), 500); // remove after fade out
+        });
+    }, 5000); // 5 seconds
+</script>
+
+{% endblock %}

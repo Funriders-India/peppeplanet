@@ -1,0 +1,745 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.2/animation_utility.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="icon" type="image/x-icon" href="{% static 'image/logo.png' %}"/>
+    <title>{% block title %}Peppe Planet - Base page{% endblock %}</title>
+    {# 🔥 page-specific css will be injected here #}
+    {% block extra_css %}{% endblock %}
+</head>
+
+<!-- Header -->
+ <div id="header" class="fixed-top bg-accent-transparent">
+  <div class="">{#Removed the r-container#}
+    <nav class="navbar navbar-expand-xl">
+      <div class="container-fluid ps-3 d-flex align-items-center">
+        <div class="logo-container">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'image/logo-navbar.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered accent-color-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-xl-0 gap-xl-4 gap-1"> 
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" aria-current="page" href="{% url 'index' %}">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">
+                About 
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Our Brands
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Little Peppe
+                  </a>
+                </li>
+
+                                    <li><a class="dropdown-item" href="#">Peppe Toys</a></li>
+
+                                    <li><a class="dropdown-item" href="#">Peppe Party</a></li>
+
+                                     <li><a class="dropdown-item" href="#">Peppe Cafe</a></li>
+
+                                      <li><a class="dropdown-item" href="#">Peppe Style</a></li>
+
+                                </ul>
+                            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.resolver_match.url_name == 'activities' %}active{% endif %}"
+                href="{% url 'activities' %}"
+              >
+                Activities
+              </a>
+            </li>
+
+            <li class="nav-item">
+             <a
+    class="nav-link"
+    href="#"
+>
+    Offers
+</a>
+
+               
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.resolver_match.url_name == 'packages' %}active{% endif %}"
+                href="#"
+              >
+                Packages
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.resolver_match.url_name == 'franchise' %}active{% endif %}"
+                href="{% url 'franchise' %}"
+              >
+                Franchise
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.resolver_match.url_name == 'locations' %}active{% endif %}"
+                href="{% url 'locations' %}"
+              >
+                Locate Us
+              </a>
+            </li>
+          </ul>
+
+          <div
+  class="mb-xl-0 mb-3 w-max-content ps-xl-3"
+  style="justify-self: center"
+>
+  <a
+    href="{% url 'get_in_touch' %}"
+    class="btn btn-accent-outline d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-1 justify-content-between
+           {% if request.resolver_match.url_name == 'get_in_touch' %} active{% endif %}"
+  >
+    <span>Get in Touch</span>
+    <div class="icon-box-2" style="transform: rotate(0deg)">
+      <i class="rtmicon rtmicon-classic-phone"></i>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- End Header -->
+
+    <!-- End Header -->
+{% block content %}
+{% endblock %}
+{% comment %} footer {% endcomment %}
+<footer>
+<div
+  class="section py-0 bg-attach-cover position-relative"
+  style="background-image: url('{% static "image/Footer.png" %}')"
+>
+
+        <div class="floating-footer">
+         <img src="{% static 'image/pagefooter.png' %}" class="img-fluid" alt="">
+
+        </div>
+        <div
+          class="r-container d-flex flex-column gap-5 h-100 justify-content-xl-end"
+        >
+          <div class="row row-cols-xl-2 row-cols-1">
+            <div class="col col-xl-7 mb-3">
+              <img src="{% static 'image/logo.png' %}" alt="" class="img-fluid" width="250">
+
+            </div>
+            <div class="col col-xl-5 mb-3">
+              <h3>
+                Building Confidence Through
+                <span class="accent-color">Fun & Adventure</span>
+              </h3>
+            </div>
+          </div>
+          <div class="row row-cols-xl-2 row-cols-1">
+            <div class="col col-xl-7 mb-3">
+              <div class="row row-cols-xl-2 row-cols-1">
+                <div class="col mb-3">
+                  <div class="d-flex flex-column">
+                    <div class="pb-2 w-max-content">
+                      <h5 class="font-1 accent-color">Quick Links</h5>
+                      <img src="{% static 'image/Asset29.png' %}" class="img-fluid w-100" alt="">
+
+                    </div>
+                    <ul class="list ps-0 gap-2 accent-color">
+                      <li>
+                      <a
+                      href="#"
+                      class="link d-flex flex-row gap-3 align-items-center"
+                      >
+                     Party
+                    </a>
+                      </li>
+                      <li>
+                  <a
+                  href="#"
+                  class="link d-flex flex-row gap-3 align-items-center"
+                  >
+                  Toys
+                 </a>
+
+                      </li>
+                      <li>
+                        <a
+                        href="#"
+                         class="link d-flex flex-row gap-3 align-items-center"
+                           >
+                         Cafe
+                        </a>
+
+                      </li>
+                      <li>
+                        <a
+                        href="{% url 'careers' %}"
+                        class="link d-flex flex-row gap-3 align-items-center"
+                        >
+                       Careers
+                      </a>
+
+                      </li>
+                      <li>
+                       <a
+                       href="#"
+                       class="link d-flex flex-row gap-3 align-items-center"
+                       >
+                        News & Events
+                       </a>
+                      </li>
+                       <li>
+                       <a
+                       href="#"
+                       class="link d-flex flex-row gap-3 align-items-center"
+                       >
+                        Terms & Conditions
+                       </a>
+
+                      </li>
+                      <li>
+                      <a
+                      href="#"
+                      class="link d-flex flex-row gap-3 align-items-center"
+                      >
+                     FAQ
+                     </a>
+                     </li>
+
+                      
+                      
+                       <li>
+                       <a
+                       href="#"
+                       class="link d-flex flex-row gap-3 align-items-center"
+                       >
+                       Privacy & Policy
+                       </a>
+                      
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col mb-3">
+                  <div class="d-flex flex-column gap-3">
+                    <div class="pb-2 w-max-content">
+                      <h5 class="font-1 accent-color">Contact Us</h5>
+                     <img src="{% static 'image/Asset29.png' %}" class="img-fluid w-100" alt="">
+
+                    </div>
+                    <div
+                      class="d-flex flex-column gap-3"
+                      style="max-width: 300px"
+                    >
+                      <a
+  href="https://www.google.com/maps/search/?api=1&query=Dreams+Mall+Kottiyam"
+  target="_blank"
+  class="link d-flex flex-xl-row flex-column gap-3 align-items-center accent-color"
+>
+  <div class="contact-item">
+    <i class="rtmicon rtmicon-location"></i>
+  </div>
+  Peppe Planet, 3rd Floor, Dreams Mall, Kottiyam
+</a>
+
+                      <a
+  href="tel:90722 05555"
+  class="link d-flex flex-xl-row flex-column gap-3 align-items-center"
+>
+  <div class="contact-item">
+    <i class="rtmicon rtmicon-classic-phone"></i>
+  </div>
+  90722 05555
+</a>
+
+                      <a
+                      href="mailto:info@peppeplanet.com"
+                      class="link d-flex flex-xl-row flex-column gap-3 align-items-center"
+                    >
+                   <div class="contact-item">
+                   <i class="rtmicon rtmicon-envelope"></i>
+                   </div>
+                    info@peppeplanet.com
+                  </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xl-5 mb-3">
+              <div class="overflow-hidden bg-accent-color p-4 rounded-4">
+                <div class="swiper swiperImage">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide w-100">
+                    <img src="{% static 'image/homefooterimg1.jpg' %}" 
+                    class="img-fluid rounded-4" 
+                    alt=""
+                    width="600"
+                    height="400">
+
+                    </div>
+                    <div class="swiper-slide w-100">
+                    <img src="{% static 'image/homefooterimg2.jpg' %}" 
+                    class="img-fluid rounded-4" 
+                    alt=""
+                    width="600"
+                    height="400">
+                    </div>
+
+                    <div class="swiper-slide w-100">
+                    <img src="{% static 'image/homefooterimg3.jpg' %}" 
+                    class="img-fluid rounded-4" 
+                    alt=""
+                    width="600"
+                    height="400">
+
+
+                    </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-xl-0 gap-3">
+            <div class="d-flex flex-row gap-3 align-items-center">
+             <div class="social-container gap-3">
+    <a href="https://www.facebook.com/share/17nhsDcBuH/" 
+       class="social-item-2" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fa-brands fa-xs fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/peppeplanet_kollam" 
+       class="social-item-2"
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fa-brands fa-xs fa-instagram"></i>
+    </a>
+
+    <a href="https://www.twitter.com" 
+       class="social-item-2"
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fa-brands fa-xs fa-twitter"></i>
+    </a>
+
+    <a href="https://youtube.com/@peppeplanet" 
+       class="social-item-2"
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fa-brands fa-xs fa-youtube"></i>
+    </a>
+</div>
+
+<div class="border-top border-accent-2 w-100"></div>
+
+            </div>
+            <div
+              class="d-flex flex-xl-row flex-column gap-3 justify-content-center pb-3"
+            >
+              <span class="text-xl-center accent-color text-center fs-6 font-3">
+                 © 2025 Peppe Planet. A brand by Funriders Entertainment Pvt Ltd. All Rights Reserved.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+
+<script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+<script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/vendor/swiper-bundle.min.js' %}"></script>
+
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/swiper-script.js' %}"></script>
+<script src="{% static 'js/submit-form.js' %}"></script>
+
+<script src="{% static 'js/vendor/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/video_embedded.js' %}"></script>
+<script src="{% static 'js/vendor/fslightbox.js' %}"></script>
+
+
+
+<!-- external file stays as normal -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.swiperImage', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    effect: 'slide',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,            // change to 2000 for 2s etc.
+      disableOnInteraction: false,
+    },
+    // optional responsive breakpoints
+    breakpoints: {
+      768: { slidesPerView: 1 },
+      992: { slidesPerView: 1 },
+    },
+  });
+});
+</script>
+{% comment %} <script>
+  new Swiper(".swiperImage", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    const swiper = new Swiper('.swiperImage', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      effect: 'slide',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets'
+      },
+    });
+
+    // DEBUG: print bullets and active index
+    console.log('Swiper initialized:', swiper);
+    console.log('Pagination container:', document.querySelector('.swiper-pagination'));
+    const showBullets = () => {
+      const bullets = document.querySelectorAll('.swiper-pagination .swiper-pagination-bullet');
+      console.log('Bullets count:', bullets.length);
+      bullets.forEach((b, i) => {
+        console.log(i, b.className, 'computed bg:', getComputedStyle(b).backgroundColor);
+      });
+    };
+
+    // call once now, and every slide change
+    showBullets();
+    swiper.on('slideChange', () => {
+      console.log('slide changed -> active index', swiper.activeIndex);
+      showBullets();
+    });
+
+  } catch (err) {
+    console.error('Swiper init error:', err);
+  }
+});
+</script> {% endcomment %}
+
+
+
+<!-- WhatsApp Floating Button -->
+{% comment %} <a href="https://wa.me/919072205555" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" class="whatsapp-icon">
+</a> {% endcomment %}
+
+{% comment %} <div style="padding:24px;max-width:720px;margin:0 auto">
+  <h1>Demo — right-side slim tab opens social panel (official icons)</h1>
+  <p>The slim tab sits flush on the right (12px). Hover or click the tab to open; icons are official-brand SVGs and right-aligned. No close button — the panel hides automatically when you move away.</p>
+</div>
+
+<!-- Wrapper: panel then slim right tab -->
+<div id="fsbWrapper" class="fsb-wrapper" aria-hidden="false">
+  <!-- Floating Social Panel (right side, hidden by default) -->
+  <div id="floatingSocial" class="floating-social" role="complementary" aria-label="Social links">
+    <!-- Official brand buttons aligned to the right -->
+
+    <!-- WhatsApp -->
+    <a class="fsb-btn" href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg class="fsb-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <path fill="#25D366" d="M16.003 3.2a12.8 12.8 0 0 0-11.2 18.91L3.2 28.8l6.89-1.59A12.8 12.8 0 1 0 16.003 3.2zm7.47 17.96c-.32.9-1.86 1.77-2.57 1.89-.66.12-1.5.17-2.43-.15a21.17 21.17 0 0 1-1.91-.81c-3.35-1.47-5.54-4.9-5.71-5.13-.17-.23-1.36-1.81-1.36-3.45 0-1.64.86-2.45 1.17-2.78.32-.33.7-.41.93-.41h.67c.22 0 .5-.08.78.6.32.77 1.09 2.66 1.19 2.86.1.2.17.43.03.66-.13.23-.2.37-.4.6-.2.23-.42.53-.6.71-.2.2-.4.41-.17.8.23.39 1.03 1.7 2.21 2.76 1.52 1.36 2.8 1.79 3.2 1.99.4.2.63.17.87-.1.24-.28 1-1.17 1.27-1.57.27-.4.53-.33.88-.2.36.13 2.27 1.07 2.66 1.27.39.2.64.3.73.46.1.16.1.94-.22 1.84z"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a class="fsb-btn" href="https://instagram.com/yourpage" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg class="fsb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <defs>
+          <linearGradient id="IG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f58529"/>
+            <stop offset="25%" stop-color="#dd2a7b"/>
+            <stop offset="50%" stop-color="#8134AF"/>
+            <stop offset="100%" stop-color="#515BD4"/>
+          </linearGradient>
+        </defs>
+        <rect width="24" height="24" rx="6" fill="url(#IG)"></rect>
+        <circle cx="12" cy="12" r="5" fill="#fff"></circle>
+        <circle cx="18" cy="6" r="1.3" fill="#fff"></circle>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a class="fsb-btn" href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg class="fsb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <rect width="24" height="24" rx="4" fill="#1877F2"/>
+        <path d="M15.5 8h-2c-.4 0-.9.5-.9 1.1V10h2.6l-.3 2h-2.3v6H10v-6H8v-2h2v-.7c0-1.7 1.1-3.3 3-3.3h2.5V8z" fill="#fff"/>
+      </svg>
+    </a>
+
+    <!-- YouTube -->
+    <a class="fsb-btn" href="https://youtube.com/yourchannel" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg class="fsb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <path fill="#FF0000" d="M23 12c0 2.12-.17 3.53-.34 4.33-.17.8-.78 1.41-1.58 1.58C19.28 18.17 12 18.17 12 18.17s-7.28 0-9.08-.26a2.09 2.09 0 0 1-1.58-1.58C1.17 15.53 1 14.12 1 12c0-2.12.17-3.53.34-4.33.17-.8.78-1.41 1.58-1.58C4.72 5.83 12 5.83 12 5.83s7.28 0 9.08.26a2.09 2.09 0 0 1 1.58 1.58c.17.8.34 2.21.34 4.33z"/>
+        <path fill="#fff" d="M10 8.8v6.4l5.5-3.2L10 8.8z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Slim visible tab (flush at right edge) -->
+  <div id="fsbHotspot" class="fsb-hotspot" title="Open social panel" role="button" aria-label="Open social panel" tabindex="0">
+    <!-- subtle vertical dots (optional) -->
+    <svg width="6" height="12" viewBox="0 0 6 12" aria-hidden>
+      <circle cx="3" cy="3" r="1" fill="rgba(255,255,255,0.95)"/>
+      <circle cx="3" cy="6" r="1" fill="rgba(255,255,255,0.95)"/>
+      <circle cx="3" cy="9" r="1" fill="rgba(255,255,255,0.95)"/>
+    </svg>
+  </div>
+</div> {% endcomment %}
+
+
+<!-- =========================
+         Thin right trigger + Small centered modal
+         ========================= -->
+    <!-- thin purple strip trigger -->
+    <button id="openContactBtn" class="right-sidebar-trigger" aria-label="Open contact form"></button>
+
+    <!-- small modal -->
+    <div id="contactModal" class="contact-modal" aria-hidden="true">
+      <div class="modal-overlay" data-close="true"></div>
+
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button id="modalCloseBtn" class="modal-close" aria-label="Close">✕</button>
+
+        <h4 id="modalTitle" class="modal-title">Contact Us</h4>
+        <p class="modal-subtitle">Any Question? <strong>Ask Now</strong></p>
+
+        <!-- IMPORTANT: form posts to get_in_touch view (AJAX-enabled) -->
+        <form id="modalForm" method="POST" action="{% url 'get_in_touch' %}" novalidate>
+          {% csrf_token %}
+          {% include "_contact_fields_only.html" %}
+        </form>
+      </div>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  try {
+    // initialize and keep a global reference so you can use it from console
+    window.swiperInstance = new Swiper('.swiperImage', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true, type: 'bullets' },
+    });
+
+    console.log('Swiper initialized', !!window.swiperInstance);
+
+    // Force render & update of pagination in case CSS/DOM changed after init
+    if (window.swiperInstance && window.swiperInstance.pagination) {
+      window.swiperInstance.pagination.render();
+      window.swiperInstance.pagination.update();
+      console.log('Pagination rendered & updated');
+    }
+
+    // Debug helper: print bullets and active index on load and on slide change
+    const dbg = () => {
+      const bullets = document.querySelectorAll('.swiper-pagination .swiper-pagination-bullet');
+      console.log('Bullets count:', bullets.length);
+      bullets.forEach((b,i) => console.log(i, b.className, getComputedStyle(b).backgroundColor));
+      console.log('Active index (swiper.activeIndex):', window.swiperInstance.activeIndex);
+    };
+    dbg();
+    window.swiperInstance.on('slideChange', () => {
+      console.log('slideChange -> activeIndex', window.swiperInstance.activeIndex);
+      dbg();
+    });
+
+  } catch (err) {
+    console.error('Swiper init error:', err);
+  }
+});
+</script>
+<!-- =========================
+         Modal open/close + AJAX submit (CSRF via cookie)
+         ========================= -->
+    <script>
+      // get CSRF cookie (Django default)
+      function getCookie(name) {
+        const v = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+        return v ? decodeURIComponent(v.split('=')[1]) : null;
+      }
+
+      (function () {
+        // Open/close modal
+        const openBtn = document.getElementById('openContactBtn');
+        const modal = document.getElementById('contactModal');
+        const closeBtn = document.getElementById('modalCloseBtn');
+        const overlay = modal.querySelector('.modal-overlay');
+
+        function openModal() {
+          modal.setAttribute('aria-hidden', 'false');
+          const first = modal.querySelector('input, textarea, select, button');
+          if (first) first.focus();
+          document.documentElement.style.overflow = 'hidden';
+        }
+        function closeModal() {
+          modal.setAttribute('aria-hidden', 'true');
+          document.documentElement.style.overflow = '';
+          if (openBtn) openBtn.focus();
+        }
+
+        if (openBtn) openBtn.addEventListener('click', openModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (overlay) overlay.addEventListener('click', closeModal);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal(); });
+
+        // AJAX submit handler for modalForm
+        document.addEventListener('submit', function (ev) {
+          if (!(ev.target && ev.target.id === 'modalForm')) return;
+          ev.preventDefault();
+
+          const form = ev.target;
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const successToast = form.querySelector('.success_msg');
+          const errorToast = form.querySelector('.error_msg');
+
+          const formData = new FormData(form);
+
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.dataset.origText = submitBtn.innerHTML; submitBtn.innerHTML = 'Sending...'; }
+
+          fetch(form.action || window.location.href, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Requested-With': 'XMLHttpRequest',
+              'X-CSRFToken': getCookie('csrftoken')
+            },
+            credentials: 'same-origin'
+          }).then(async function (res) {
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok) {
+              const msg = (data && data.message) ? data.message : 'Submission failed';
+              if (errorToast) {
+                errorToast.style.display = 'block';
+                const t = errorToast.querySelector('.toast-text');
+                if (t) t.textContent = msg;
+                setTimeout(() => errorToast.style.display = 'none', 4000);
+              } else { alert(msg); }
+              throw new Error(msg);
+            }
+
+            // success
+            const msg = (data && data.message) ? data.message : 'Thanks — we received your message';
+            if (successToast) {
+              successToast.style.display = 'block';
+              const t = successToast.querySelector('.toast-text');
+              if (t) t.textContent = msg;
+              setTimeout(() => successToast.style.display = 'none', 4000);
+            } else { alert(msg); }
+
+            form.reset();
+            modal.setAttribute('aria-hidden', 'true');
+            document.documentElement.style.overflow = '';
+            return data;
+          }).catch(function (err) {
+            console.error('Contact submit error:', err);
+          }).finally(function () {
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = submitBtn.dataset.origText || 'Submit'; }
+          });
+        });
+
+        // toast close buttons inside include
+        document.addEventListener('click', function (ev) {
+          if (ev.target && ev.target.classList && ev.target.classList.contains('toast-close-btn')) {
+            const t = ev.target.closest('.toast');
+            if (t) t.style.display = 'none';
+          }
+        });
+
+      })();
+    </script>
+
+    {% block extra_js %}{% endblock %}
+</head>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693bdb918465ad197f9be330/1jc8t3cmk';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
+
+
+
+
+
+
+     
+

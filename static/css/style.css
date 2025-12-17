@@ -102,17 +102,7 @@
     height: auto !important;
   }
 }
-/* ===== MOBILE: fix testimonials section ===== */
-@media (max-width: 767.98px) {
-
-  /* Let the list of testimonials grow naturally (no inner scroll area) */
-  .service-scroll {
-    max-height: none !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  /* Make each testimonial card auto-height, full-width, and nicely spaced */
+testimonial card auto-height, full-width, and nicely spaced */
   .testimonial-container {
     height: auto !important;
     width: 100% !important;
@@ -123,7 +113,19 @@
   .testimonial-container.card {
     padding: 1.5rem !important;
   }
-/* MOBILE: testimonials – no inner scrollbar, cards auto-height */
+/* MOBILE: testi/* ===== MOBILE: fix testimonials section ===== */
+    /* remove fixed height */
+    max-height: 260px !important;  /* control size */
+    object-fit: cover;@media (max-width: 767.98px) {
+
+  /* Let the list of testimonials grow naturally (no inner scroll area) */
+  .service-scroll {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Make each monials – no inner scrollbar, cards auto-height */
 
   .service-scroll {
     max-height: none !important;
@@ -168,9 +170,7 @@
   /* Make the image mobile-friendly */
   .section .bg-accent-color img {
     width: 100% !important;
-    height: auto !important;       /* remove fixed height */
-    max-height: 260px !important;  /* control size */
-    object-fit: cover;
+    height: auto !important;   
     border-radius: 20px !important;
   }
 
@@ -733,7 +733,7 @@ img {
 /*for desktop view*/
 @media (min-width: 1200px) {
     .logo-container {
-        margin-left: 140px;
+        margin-left: 100px;
     }
 }
 
@@ -6204,5 +6204,325 @@ git push -u origin main*/
 
 }
 
+ /* ===============================
+     UPDATIONS FOR THE RIDES SECTION IN THE INDEX PAGE FOR MOBILE VIEW
+     =============================== */
 
+
+/* Mobile card styles with alternating text positions - NO BLACK SHADES */
+@media (max-width: 767px) {
+    .swiperTeam .swiper-slide {
+        padding: 0 5px !important;
+    }
+    
+    .swiperTeam .swiper-slide > .accordion-container {
+        height: 100% !important;
+    }
+    
+    .swiperTeam .swiper-slide > .accordion-container > .accordion-item {
+        height: 420px !important;
+        min-height: 420px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+        border-radius: 15px !important;
+        overflow: hidden !important;
+        padding-top: 40px !important;
+    }
+    
+    /* Social icons positioning */
+    .swiperTeam .social-container {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 20 !important;
+        padding: 10px 8px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-top-right-radius: 15px !important;
+    }
+    
+    /* ========== ODD CARDS (1st, 3rd, 5th) - TEXT AT TOP ========== */
+    .swiperTeam .swiper-slide:nth-child(odd) .accordion-item {
+        justify-content: flex-start !important;
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(odd) .team-title {
+        text-align: center !important;
+        padding: 15px 10px 10px 10px !important;
+        margin-bottom: 5px !important;
+        position: relative !important;
+        z-index: 5 !important;
+        order: 1 !important; /* Text comes first */
+        /* REMOVED: background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent) !important; */
+        /* REMOVED: border-bottom: 2px solid rgba(255,255,255,0.2) !important; */
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(odd) .team-title h4 {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important; /* Kept for text readability */
+        letter-spacing: 0.5px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(odd) .team-img {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important; /* Center vertically */
+        justify-content: center !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        min-height: 250px !important;
+        order: 2 !important; /* Image comes after text */
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(odd) .team-img img {
+        max-height: 220px !important;
+        max-width: 85% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin-top: 10px !important; /* Space from text */
+    }
+    
+    /* ========== EVEN CARDS (2nd, 4th, 6th) - TEXT AT BOTTOM ========== */
+    .swiperTeam .swiper-slide:nth-child(even) .accordion-item {
+        justify-content: flex-end !important;
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(even) .team-title {
+        text-align: center !important;
+        padding: 10px 10px 15px 10px !important;
+        margin-top: 5px !important;
+        position: relative !important;
+        z-index: 5 !important;
+        order: 2 !important; /* Text comes after image */
+        /* REMOVED: background: linear-gradient(to top, rgba(0,0,0,0.4), transparent) !important; */
+        /* REMOVED: border-top: 2px solid rgba(255,255,255,0.2) !important; */
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(even) .team-title h4 {
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: #FFFFFF !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important; /* Kept for text readability */
+        letter-spacing: 0.5px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(even) .team-img {
+        flex: 1 !important;
+        display: flex !important;
+        align-items: center !important; /* Center vertically */
+        justify-content: center !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        min-height: 250px !important;
+        order: 1 !important; /* Image comes before text */
+    }
+    
+    .swiperTeam .swiper-slide:nth-child(even) .team-img img {
+        max-height: 220px !important;
+        max-width: 85% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        margin-bottom: 10px !important; /* Space from text */
+    }
+    
+    /* ========== COMMON STYLES ========== */
+    /* Doodle/asset image */
+    .swiperTeam .asset {
+        position: absolute !important;
+        z-index: 10 !important;
+    }
+    
+    /* Doodle position for ODD cards (text top) */
+    .swiperTeam .swiper-slide:nth-child(odd) .asset {
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    
+    /* Doodle position for EVEN cards (text bottom) */
+    .swiperTeam .swiper-slide:nth-child(even) .asset {
+        top: 50px !important; /* Below social icons */
+        right: 15px !important;
+    }
+    
+    .swiperTeam .asset img {
+        max-width: 65px !important;
+        height: auto !important;
+        opacity: 0.9 !important;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2)) !important;
+    }
+    
+    /* Social icons styling */
+    .swiperTeam .social-container .social-item,
+    .swiperTeam .social-container .social-item-2,
+    .swiperTeam .social-container .social-item-3,
+    .swiperTeam .social-container .social-item-4,
+    .swiperTeam .social-container .social-item-5,
+    .swiperTeam .social-container .social-item-6 {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 50% !important;
+        margin: 3px 0 !important;
+        font-size: 14px !important;
+    }
+}
+
+/* Adjust for very small mobile screens */
+@media (max-width: 360px) {
+    .swiperTeam .swiper-slide > .accordion-container > .accordion-item {
+        height: 400px !important;
+        min-height: 400px !important;
+    }
+    
+    .swiperTeam .team-title h4 {
+        font-size: 20px !important;
+    }
+    
+    .swiperTeam .team-img img {
+        max-height: 200px !important;
+    }
+}
+
+/* Alternative: If you want to control text position with classes instead */
+@media (max-width: 767px) {
+    /* Text at top class */
+    .text-top .team-title {
+        order: 1 !important;
+        margin-bottom: 10px !important;
+        /* REMOVED: background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent) !important; */
+    }
+    
+    .text-top .team-img {
+        order: 2 !important;
+        align-items: center !important;
+    }
+    
+    .text-top .team-img img {
+        margin-top: 10px !important;
+    }
+    
+    /* Text at bottom class */
+    .text-bottom .team-title {
+        order: 2 !important;
+        margin-top: 10px !important;
+        /* REMOVED: background: linear-gradient(to top, rgba(0,0,0,0.4), transparent) !important; */
+    }
+    
+    .text-bottom .team-img {
+        order: 1 !important;
+        align-items: center !important;
+    }
+    
+    .text-bottom .team-img img {
+        margin-bottom: 10px !important;
+    }
+}
+
+
+
+ /* ===============================
+     UPDATIONS FOR TESTIMONIALS FOR MOBILE VIEW
+     =============================== */
+
+
+@media (max-width: 768px) {
+
+  /* ===============================
+     REMOVE BOOTSTRAP GUTTERS
+     =============================== */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .row > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ===============================
+     SCROLL CONTAINER (IMPORTANT FIX)
+     =============================== */
+  .service-scroll {
+    max-height: 260px !important;      /* one card height */
+    overflow-y: auto;
+    padding-right: 4px !important;
+    padding-bottom: 40px !important;   /* 👈 allows last card */
+    
+    scroll-snap-type: y proximity;     /* 👈 NOT mandatory */
+  }
+
+  /* ===============================
+     TESTIMONIAL CARD
+     =============================== */
+  .testimonial-container.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 0.9rem !important;
+    margin-bottom: 0.6rem !important;
+
+    min-height: unset !important;
+    height: auto !important;
+
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  /* ===============================
+     TEXT SPACING
+     =============================== */
+  .testimonial-container.card p,
+  .testimonial-container.card blockquote {
+    margin: 0 0 0.5rem 0 !important;
+    padding: 0 !important;
+    line-height: 1.45;
+  }
+
+  /* ===============================
+     USER / NAME SECTION
+     =============================== */
+  .testimonial-container.card h6,
+  .testimonial-container.card small {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.3;
+  }
+
+  /* ===============================
+     FLEX GAP REDUCTION
+     =============================== */
+  .testimonial-container.card .d-flex,
+  .testimonial-container.card .flex-column {
+    gap: 0.4rem !important;
+  }
+
+  /* ===============================
+     SCROLLBAR
+     =============================== */
+  .service-scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .service-scroll::-webkit-scrollbar-thumb {
+    background: #7b2cbf;
+    border-radius: 10px;
+  }
+
+  .service-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+}
 

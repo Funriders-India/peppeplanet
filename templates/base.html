@@ -718,7 +718,32 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
     {% block extra_js %}{% endblock %}
+
+
+      <!-- Add this style block in your footer section -->
+<style>
+  @media (max-width: 768px) {
+    /* Remove all excessive padding/margins */
+    footer > div {
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+    
+    /* Reduce row gaps */
+    .row.g-4, .row.gap-4, .row.gap-3 {
+      gap: 1rem !important;
+      margin-bottom: 0 !important;
+    }
+    
+    /* Fix column spacing */
+    [class*="col-"] {
+      margin-bottom: 1rem !important;
+    }
+  }
+</style>
 </head>
+
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

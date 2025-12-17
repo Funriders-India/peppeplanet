@@ -66,7 +66,7 @@ $(function () {
 
 });
 
-$(function () {
+/*$(function () {
     var swiperTeam = new Swiper('.swiper.swiperTeam', {
         autoplay: {
             delay: 5000
@@ -100,7 +100,42 @@ $(function () {
         },
     });
 
+});*/
+$(function () {
+    var swiperTeam = new Swiper('.swiper.swiperTeam', {
+        autoplay: {
+            delay: 5000
+        },
+        speed: 2000,
+        slidesPerView: 1, // Start with 1 for mobile
+        spaceBetween: 10,
+        loop: false,
+        grabCursor: true,
+        breakpoints: {
+            // when window width is >= 360px
+            360: {
+                slidesPerView: 1, // 1 card for mobile
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 3, // 3 cards for desktop
+            },
+            // when window width is >= 1024px
+            1024: {
+                slidesPerView: 3, // 3 cards for desktop
+            }
+        },
+        // If we need pagination
+        pagination: {
+            enabled: true,
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
 });
+
+
 
 $(function () {
     var swiperTestimonials = new Swiper('.swiper.swiperTestimonials', {
@@ -246,5 +281,12 @@ $(function () {
     });
 
 });
+
+
+
+
+ 
+
+
 
 
